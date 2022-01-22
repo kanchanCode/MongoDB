@@ -84,24 +84,25 @@ Join  -> Embedding & Linking
 Partition -> Shard
 
 # D/b JSON and BSON
-JSON(JavaScript Object Notation) shows up in many different cases: APIs,Configuration files,Log messages and Database storage. 
+* JSON(JavaScript Object Notation) shows up in many different cases: APIs,Configuration files,Log messages and Database storage. 
 but it only supports a limited number of basic data types and it's a text-based format, and text parsing is very slow
 
-BSON(Binary JSON),a binary representation to store data in JSON format,with specific extensions for broader applications, and optimized for data storage and retrieval.
-Binary structure encodes type and length information, which allows it to be parsed much more quickly.
-BSON has been extended to add some optional non-JSON-native data types, like dates and binary data,
-It also allows for comparisons and calculations to happen directly on data in ways that simplify consuming application code.
+* BSON(Binary JSON),a binary representation to store data in JSON format,with specific extensions for broader applications, and optimized for data storage and retrieval.
+* Binary structure encodes type and length information, which allows it to be parsed much more quickly.
+* BSON has been extended to add some optional non-JSON-native data types, like dates and binary data,
+* It also allows for comparisons and calculations to happen directly on data in ways that simplify consuming application code.
 Anything you can represent in JSON can be natively stored in MongoDB, and retrieved just as easily in JSON
 
            JSON                                          BSON    
 Type	   Standard file format	                         Binary file format
 Speed	   Comparatively less fast	                     Faster
-Space	   Consumes comparatively less space.	         More space is consumed.
-Usage	   Transmission of data.	                     Storage of data.
-Encoding   UTF-8 String                                  Binary 
+Space	   Consumes comparatively less space.	           More space is consumed.
+Usage	   Transmission of data.	                       Storage of data.
+Encoding   UTF-8 String                                Binary 
 Data 
-Support     String, Boolean, Number, Array                String, Boolean, Number (Integer, Float, Long, Decimal128...), Array, Date, Raw Binary
-Readability Human and Machine                            Machine Only
+Support     String, Boolean, Number, Array             String, Boolean, Number (Integer, Float, Long, Decimal128)
+                                                      Array, Date, Raw Binary
+Readability Human and Machine                          Machine Only
 
 # Data models in MongoDB
 
@@ -424,3 +425,11 @@ members:78,
     db.collection_name.find({members: {$gt: 90}})
     db.collection_name.find({members: {$gte: 90}})    -> Less than/Greater than/ Less than or Eq/Greater than or Eq
 
+17. create View
+
+    db.createView("<viewName>","<source>",[<pipeline>],{"collation" : { <collation> }})
+    
+    db.createView("firstView","demo113", [ { $project: { "Name": "$Details.Name", Subject: 1 } } ] )
+
+    Display fields from a view with the help of find() method −
+    db.firstView.find();
