@@ -1,0 +1,22 @@
+2022-01-22 10:35:08,768:__init__:INFO:Connection created successfully!
+2022-01-22 10:35:08,774:insert_to_db:INFO:Documents inserted sucessfully!
+2022-01-22 10:35:08,777:update_db:INFO:Documents updated sucessfully!
+2022-01-22 10:35:08,778:read_collect:INFO:{'_id': ObjectId('61eb846e25052a0269d643f1'), 'e_id': '110', 'firstname': 'vivek2', 'lastname': 'Yatri', 'department': 'Cloud computing2'}
+2022-01-22 10:35:08,779:read_collect:INFO:Data displayed successfully
+2022-01-22 10:35:08,779:read_collect:INFO:{'_id': ObjectId('61eb846e25052a0269d643f2'), 'e_id': '111', 'firstname': 'Kanchan2', 'lastname': 'jaiswal', 'department': 'Data engineering'}
+2022-01-22 10:35:08,779:read_collect:INFO:Data displayed successfully
+2022-01-22 10:35:08,779:read_collect:INFO:{'_id': ObjectId('61eb846e25052a0269d643f3'), 'e_id': '112', 'firstname': 'Shilpi', 'lastname': 'jaiswal', 'department': 'Data governance'}
+2022-01-22 10:35:08,779:read_collect:INFO:Data displayed successfully
+2022-01-22 10:35:08,779:read_collect:INFO:{'_id': ObjectId('61eb8512e681773da8136f50'), 'e_id': '113', 'firstname': 'Priya', 'lastname': 'jaiswal', 'department': 'Financial Analyst'}
+2022-01-22 10:35:08,779:read_collect:INFO:Data displayed successfully
+2022-01-22 10:35:08,779:read_collect:INFO:{'_id': ObjectId('61eb908423ef7f77e8c20759'), 'e_id': '110', 'firstname': 'vivek2', 'lastname': 'Yatri', 'department': 'Cloud computing2'}
+2022-01-22 10:35:08,779:read_collect:INFO:Data displayed successfully
+2022-01-22 10:35:08,780:read_collect:INFO:{'_id': ObjectId('61eb908423ef7f77e8c2075a'), 'e_id': '111', 'firstname': 'Kanchan2', 'lastname': 'jaiswal', 'department': 'Data engineering'}
+2022-01-22 10:35:08,780:read_collect:INFO:Data displayed successfully
+2022-01-22 10:35:08,780:read_collect:INFO:{'_id': ObjectId('61eb908423ef7f77e8c2075b'), 'e_id': '112', 'firstname': 'Shilpi', 'lastname': 'jaiswal', 'department': 'Data governance'}
+2022-01-22 10:35:08,780:read_collect:INFO:Data displayed successfully
+2022-01-22 10:35:08,780:read_collect:INFO:{'_id': ObjectId('61eb908423ef7f77e8c2075c'), 'e_id': '113', 'firstname': 'Priya', 'lastname': 'jaiswal', 'department': 'Financial Analyst'}
+2022-01-22 10:35:08,780:read_collect:INFO:Data displayed successfully
+2022-01-22 10:35:08,780:read_collect:INFO:{'_id': ObjectId('61eb908423ef7f77e8c2075d'), 'e_id': '114', 'firstname': 'Abc', 'lastname': 'xyz', 'department': 'No'}
+2022-01-22 10:35:08,780:read_collect:INFO:Data displayed successfully
+2022-01-22 10:35:08,781:drop_collect:INFO:Document deleted successfully
