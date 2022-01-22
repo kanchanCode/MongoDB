@@ -1,0 +1,5 @@
+2022-01-22 10:35:36,264:__init__:INFO:Connection created successfully!
+2022-01-22 10:35:36,274:insert_to_db:INFO:Documents inserted sucessfully!
+2022-01-22 10:35:36,277:join_data:INFO:{'_id': ObjectId('61eb846e25052a0269d643f1'), 'e_id': '110', 'firstname': 'vivek2', 'lastname': 'Yatri', 'department': 'Cloud computing2', 'country_name': []}
+2022-01-22 10:35:36,278:join_data:INFO:{'_id': ObjectId('61eb908423ef7f77e8c20759'), 'e_id': '110', 'firstname': 'vivek2', 'lastname': 'Yatri', 'department': 'Cloud computing2', 'country_name': []}
+2022-01-22 10:35:36,278:join_data:INFO:Join created
