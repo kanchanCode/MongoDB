@@ -8,6 +8,59 @@ A DBMS serves as an interface between an end-user and a database, allowing users
 2. Non-Relational(noSQL)- traditional table key-value stores, documents(like JSON),graphs,flexible tables 
 noSQL DBMS- mongoDB,dynamoDB,firebase etc
 
+# noSQL Database
+NoSQL Database is a non-relational Data Management System, that does not require a fixed schema.
+NoSQL is used for Big data and real-time web apps.
+
+* Why noSQL?
+The system response time becomes slow when you use RDBMS for massive volumes of data.
+The alternative for this issue is to distribute database load on multiple hosts whenever the load increases. This method is known as “scaling out.”(Horizontal scaling)
+
+* Features of noSQL:
+1. Non-relational - No complex features like query languages, query planners,referential integrity joins, ACID
+2. Schema-free - Offers heterogeneous structures of data in the same domain
+3. Simple API - Offers easy to use interfaces for storage and querying data provided
+4. Distributed - Multiple NoSQL databases can be executed in a distributed fashion
+Shared Nothing Architecture. This enables less coordination and higher distribution.
+
+# Types of NoSQL Databases:
+
+1. Key-value Pair Based : 
+Key-value pair storage databases store data as a hash table where each key is unique, and the value can be a JSON, BLOB(Binary Large Objects), string, etc.
+This kind of NoSQL database is used as a collection, dictionaries, associative arrays, etc. Key value stores help the developer to store schema-less data. 
+They work best for shopping cart contents.
+
+Redis, Dynamo, Riak are some NoSQL examples of key-value store DataBases
+
+2. Column-oriented Graph : 
+
+Column-oriented databases work on columns.Every column is treated separately. Values of single column databases are stored contiguously.
+
+
+Column-based NoSQL databases are widely used to manage data warehouses, business intelligence, CRM, Library card catalogs,
+
+HBase, Cassandra, HBase, Hypertable are NoSQL query examples of column based database.
+
+3. Graphs based
+
+A graph type database stores entities as well the relations amongst those entities. 
+The entity is stored as a node with the relationship as edges. 
+An edge gives a relationship between nodes. Every node and edge has a unique identifier.
+
+Graph base database mostly used for social networks, logistics, spatial data.
+
+Neo4J, Infinite Graph, OrientDB, FlockDB are some popular graph-based databases.
+
+4. Document-oriented
+Document-Oriented NoSQL DB stores and retrieves data as a key value pair but the value part is stored as a document. 
+The document is stored in JSON or XML formats.
+
+The document type is mostly used for CMS systems, blogging platforms, real-time analytics & e-commerce applications. 
+
+Amazon SimpleDB, CouchDB, MongoDB, Riak, Lotus Notes, MongoDB, are popular Document originated DBMS systems.
+
+# MongoDB is a document-oriented noSQL database
+
 # MongoDB
 1. MongoDB is a document designed for ease of development and scaling.
 2. It is intuitive and easy to use NoSQL Database.
@@ -49,6 +102,72 @@ Encoding   UTF-8 String                                  Binary
 Data 
 Support     String, Boolean, Number, Array                String, Boolean, Number (Integer, Float, Long, Decimal128...), Array, Date, Raw Binary
 Readability Human and Machine                            Machine Only
+
+# Data models in MongoDB
+
+MongoDB provides two types of data models:— 
+Embedded data model and Normalized data model. 
+Based on the requirement, we can use either of the models while preparing our document.
+
+1. Embedded data model :
+In this model, all the related data are embedded in a single document, it is also known as de-normalized data model.
+
+example -
+{
+	_id: ,
+	Emp_ID: "10025AE336"
+	Personal_details:{
+		First_Name: "Radhika",
+		Last_Name: "Sharma",
+		Date_Of_Birth: "1995-09-26"
+	},
+	Contact: {
+		e-mail: "radhika_sharma.123@gmail.com",
+		phone: "9848022338"
+	},
+	Address: {
+		city: "Hyderabad",
+		Area: "Madapur",
+		State: "Telangana"
+	}
+}
+
+2. Normalized data model :
+In this model, sub documents referes the original document using references.
+
+example - 
+
+Employee:
+{
+	_id: <ObjectId101>,
+	Emp_ID: "10025AE336"
+}
+
+Personal_details:
+{
+	_id: <ObjectId102>,
+	em1pDocID: " ObjectId10",
+	First_Name: "Radhika",
+	Last_Name: "Sharma",
+	Date_Of_Birth: "1995-09-26"
+}
+
+Contact:
+{
+	_id: <ObjectId103>,
+	empDocID: " ObjectId101",
+	e-mail: "radhika_sharma.123@gmail.com",
+	phone: "9848022338"
+}
+
+Address:
+{
+	_id: <ObjectId104>,
+	empDocID: " ObjectId101",
+	city: "Hyderabad",
+	Area: "Madapur",
+	State: "Telangana"
+}
 
 
 # Keys 
